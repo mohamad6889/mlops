@@ -18,4 +18,5 @@ jobs:
           # Create CML report
           cat metrics.txt >> report.md
           echo '![](./feature_importance.png "FI")' >> report.md
+          echo '![](./residuals.png "Residuals")' >> report.md
           cml comment create report.md
