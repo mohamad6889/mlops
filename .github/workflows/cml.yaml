@@ -7,14 +7,14 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 #         with:
-#           ref: ${{ github.event.workflow_run.head_sha }}
+#           ref: ${{ secrets.G_TOKEN }}
       - uses: iterative/setup-cml@v1
       - uses: actions/setup-python@v2
         with:
           python-version: '3.5'
       - name: Train model
         env:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          repo_token: ${{ secrets.G_TOKEN }}
         run: |
           pip3 install -r requirements.txt
           python train.py
