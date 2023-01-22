@@ -14,8 +14,8 @@ jobs:
           python train.py
           
           cat metrics.txt >> report.md
-          echo '![](feature_importance.png --md "Feature Importance")' >> report.md
-          echo '![](residuals.png --md "Residuals")' >> report.md
+          echo '![](./feature_importance.png "Feature Importance")' >> report.md
+          echo '![](./residuals.png "Residuals")' >> report.md
           
           echo "## Data viz" >> report.md
           cml comment create report.md
