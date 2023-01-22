@@ -7,7 +7,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          ref: ${{ secrets.GITHUB_TOKEN }}
+          ref: ${{ "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" }}
       - uses: iterative/setup-cml@v1
       - uses: actions/setup-python@v2
         with:
