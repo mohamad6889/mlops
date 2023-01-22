@@ -7,7 +7,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 #         with:
-#           ref: ${{ github.event.pull_request.head.sha }}
+#           ref: ${{ github.event.workflow_run.head_sha }}
       - uses: iterative/setup-cml@v1
       - uses: actions/setup-python@v2
         with:
