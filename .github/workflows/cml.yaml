@@ -14,7 +14,8 @@ jobs:
           python-version: '3.5'
       - name: Train model
         env:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
+#           repo_token: ${{ secrets.GITHUB_TOKEN }}
+          repo_token: "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"
         run: |
           pip3 install -r requirements.txt
           python train.py
