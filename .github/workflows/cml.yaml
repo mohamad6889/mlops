@@ -7,8 +7,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: cml_run
-        env:
-          REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        
         run: |
           # Your ML workflow goes here
           pip install -r requirements.txt
@@ -20,3 +19,5 @@ jobs:
           
           echo "## Data viz" >> report.md
           cml comment create report.md
+        env:
+          REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
